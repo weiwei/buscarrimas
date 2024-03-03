@@ -77,7 +77,7 @@ export default function Index() {
 
   return (
     <div className="flex justify-center">
-      <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8", maxWidth: "600px" }} className="p-4">
+      <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8", maxWidth: "800px" }} className="p-4">
         <h1 className="text-2xl text-center m-4">Search for rhyming words in Spanish</h1>
         <SearchForm onClickSearch={fetchWords} />
         <SearchResult words={words}/>

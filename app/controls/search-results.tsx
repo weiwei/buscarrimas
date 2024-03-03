@@ -1,14 +1,7 @@
 import { useState } from "react";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "../../@/components/ui/form";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../../@/components/ui/select";
-import { useForm } from "react-hook-form";
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "../../@/components/ui/radio-group";
-import { Checkbox } from "../../@/components/ui/checkbox";
 import { Separator } from "../../@/components/ui/separator";
+import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons"
 
 const calcOpacity = (freq: number) => {
   if (freq >= 100) {
@@ -45,7 +38,10 @@ export const SearchResult = (props: Props) => {
           return (
             <div key={k}>
               <h4 className="h4">
-                {k} Syllable{Number(k) > 1 && "s"}:
+                <div className="flex">
+                  <Button variant="ghost" size="icon" className="w-6 h-6 mr-2"><ChevronUpIcon /></Button>
+                  {k} Syllable{Number(k) > 1 && "s"}:
+                </div>
               </h4>
               <ul className="flex flex-wrap">
                 {words[k].map((w: Word) => (
