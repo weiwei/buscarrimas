@@ -8,6 +8,7 @@ import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "../../@/components/ui/radio-group";
 import { Checkbox } from "../../@/components/ui/checkbox";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons"
 
 interface TextSelectProps {
   placeholder: string;
@@ -65,7 +66,7 @@ export const SearchForm = (props: Props) => {
               </FormControl>
             </FormItem>
         )} />
-        <Button type="submit" className="flex-none">Search</Button>
+        <Button type="submit" className="flex-none"><MagnifyingGlassIcon /></Button>
         </div>
         <div className="grid grid-cols-3 gap-x-5 gap-y-5">
         <FormField control={form.control} name={"rhymingType"} render={({ field }) => (

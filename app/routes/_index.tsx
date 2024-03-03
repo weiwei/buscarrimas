@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SearchForm, formSchema } from "../controls/search-form";
 import { SearchResult, Word } from "../controls/search-results";
 import { z } from "zod";
+import { Separator } from "../../@/components/ui/separator";
 
 export const meta: MetaFunction = () => {
   return [
@@ -81,7 +82,9 @@ export default function Index() {
         <h1 className="text-2xl text-center m-4">Search for rhyming words in Spanish</h1>
         <SearchForm onClickSearch={fetchWords} />
         <SearchResult words={words}/>
+        <Separator className="mt-5 mb-5"/>
       </div>
+
     </div>
   );
 }
